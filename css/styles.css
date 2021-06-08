@@ -1,0 +1,20 @@
+body {
+	background-color: lightcoral;
+}
+
+.canvas-container {
+	background-color: deepskyblue;
+	margin: 0 auto;
+	width: 90vw;
+	height: 90vh;
+	border: 1px solid black;
+}
+
+canvas {
+	display: block;
+	margin: 0 auto;
+}
+
+form {
+	display: inline-block;
+}

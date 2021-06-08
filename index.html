@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Document</title>
+	</head>
+	<body onload="init()">
+		<header class="actions">
+			<input type="color" name="color" onchange="onSetColor(this.value)" />
+
+			<select name="shape" onchange="onSetShape(this.value)">
+				<option value="square">square</option>
+				<option value="circle">circle</option>
+				<option value="triangle">triangle</option>
+				<option value="dots">dots</option>
+			</select>
+
+			<button class="clear" onclick="onClear()">clear</button>
+
+			<form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+				<input name="img" id="imgData" type="hidden" />
+				<button class="btn" type="submit">Publish</button>
+				<a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download</a>
+				<div class="share-container"></div>
+			</form>
+		</header>
+
+		<main class="canvas-container">
+			<canvas class="canvas" height="450" width="450" onclick="draw(event)"></canvas>
+		</main>
+
+		<script src="js/services/utils.js"></script>
+		<script src="js/services/upload-service.js"></script>
+		<script src="js/services/canvas.js"></script>
+		<script src="js/controller.js"></script>
+	</body>
+</html>
